@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abhinav Kumar Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1a8e74ee6f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -43,26 +44,102 @@
                     
                     I have accumulated five years of experience as an IT professional, specializing in Python. My expertise lies in various domains including full-stack development, Python development, data science, and data analysis.</p>
                     <div class="tab-title"></div>
-                    <p class="tab-links active-link">Skills</p>
-                    <p class="tab-links">Experience</p>
-                    <p class="tab-links">Education</p>
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
                 <!-- </div> -->
-                <div class="tab-contents">
-                    
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
                     </br>
-                        <li><span>Angular</span></li>
-                        <li><span>Python</span></li>
-                        <li><span>React</span></li>
+                        <li><span>Software Developer</span><br> Python, Angular(10, 11, 13, 14, 15), React</li>
+                        <li><span>Web Developer</span><br> HTML, CSS, JavaScript, Jquery, TypeScript </li>
+                        <li><span>Data Analaysis</span><br>Pandas, Numpy, Scikit-Learn, Matplotlib, Seaborn, PowerBi, PowerApps</li>
                         <li><span>Database</span> <br> MySQL, PostGre, Sqlite, NoSQL</li>
-                        <li><span>Cloud</span></br></li>
-                        <li><span>Devops</span></li>
-
+                        <li><span>Machine Learning</span></li>
+                        <li><span>Cloud</span></br>AWS, GCP</li>
+                        <li><span>Devops</span></br>Docker, Kubernetes, CI/CD</li>
                     </ul>
                     </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                        </br>
+                            <li><span>2023 - 2024</span><br>Consultant at Amazon</li>
+                            <li><span>2021 - 2022</span><br>Senior Developer at Altimetrik </li>
+                            <li><span>2021 - 2022</span><br>Software Developer at Clarivate Analytics </li>
+                            <li><span>2020 - 2021</span> <br>Software Developer at Anora Semiconductor Labs</li>
+                            <li><span>2018 - 2020</span><br>Consultant at Dxc Technology</li>
+                            <li><span>2017 - 2018</span></br>Software Developer at Disys</li>
+                            <li><span>2023 - 2023</span></br>Software Developer Internship at Nitrexo</li>
+                        </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                            </br>
+                                <li><span>2022 - 2023</span><br>Master of Science in MIS from Cranfiled University - UK</li>
+                                <li><span>2013 - 2017</span><br>Bachelor of Technology in EEE from SRM University - India   </li>
+                                
+                            </ul>
+                            </div>
                 </div>
     </div>
 </div>
+<!-- -----------------------------------Services----------------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Software Developer</h2>
+                <p>Full Stack Developer, with experience in creating robust web applications with Python employing modern frameworks such as Angular and React</p>
+                <a href="#">more...</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-web-awesome"></i>
+                <h2>Web Developer</h2>
+                <p>Web Developer, with experience in creating and maintaining high-quality websites skilled in HTML, CSS, JS, JQuery </p> 
+                <a href="#">more...</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-file-shield"></i>
+                <h2>Data Analysis</h2>
+                <p>Data Analysis, with experience in collecting, organizing, manipulating and disseminating various types of statistical figures using Python Packages, Libraries and PowerBI</p> 
+                <a href="#">more...</a>
+            </div>
+        </div>
 
-    <script src="js/script.js"></script>
+    </div>
+</div>
+<!-- ----------------project---------------------- -->
+<div id="project">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/billing_software.JPG" alt="Billing software">
+            </div>
+            <div class="work">
+                <img src="images/billing_software.JPG" alt="Google WebScrapping">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+    <!-- <script src="js/script.js"></script> -->
 </body>
 </html>
