@@ -16,7 +16,7 @@ A personal portfolio website for Abhinav Kumar, showcasing skills, experience, e
 
 ## Features
 
-- Responsive layout for desktop and mobile
+- Responsive layout for desktop
 - Animated typing effect for profession titles
 - Sidebar navigation with smooth scrolling and active state
 - Theme color switcher (5 color options)
