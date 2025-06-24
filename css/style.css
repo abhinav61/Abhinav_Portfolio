@@ -779,7 +779,12 @@ textarea {
     }
 } */
 
-
+.footer{
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    color: var(--text-black-900);
+}
 .main-content {
   overflow-x: hidden;
   position: relative;
