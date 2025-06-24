@@ -1,0 +1,87 @@
+:root {
+    --bg-black-100: #f5f6fa;
+    --bg-black-50: #dcdde1;
+    --text-black-900: #2f3640;
+}
+
+.style-switch {
+    position: fixed;
+    right: 0;
+    top: 60px;
+    padding: 10px 15px;
+    width: 200px;
+    border: 1px solid var(--bg-black-50);
+    background: var(--bg-black-100);
+    z-index: 101;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    transform: translateX(100%);
+}
+
+/* Shared styles for icons */
+.style-switch .s-icon {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    font-size: 18px;
+    background: var(--bg-black-100);
+    color: var(--text-black-900);
+    right: 100%;
+    margin-right: 25px;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Positioning the icons */
+.style-switch .style-switch-toggler {
+    top: 0;
+}
+
+.style-switch .style-switch-toggler:nth-of-type(2) {
+    top: 50px /* 40px height + 20px spacing */
+}
+
+.style-switch .s-icon i {
+    line-height: 1;
+}
+
+/* Title */
+.style-switch h4 {
+    font-size: large;
+    font-weight: 600;
+    color: var(--text-black-900);
+    margin: 10px 0 15px;
+    text-align: left;
+}
+
+/* Color circles */
+.colors {
+    display: flex;
+    gap: 8px;
+}
+
+.colors span {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.style-switch.open{
+    transform: translateX(-25px);
+}
+
+.color-1 { background-color: #ec1839; }
+.color-2 { background-color: #fa5b0f; }
+.color-3 { background-color: #37b182; }
+.color-4 { background-color: #1854b4; }
+.color-5 { background-color: #f021b2; }
